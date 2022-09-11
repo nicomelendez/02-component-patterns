@@ -19,3 +19,9 @@
     border-color: white;
     color: white;
 }
+
+.shooping-cart{
+    position: fixed;
+    right: 10px;
+    top:160px;
+}
