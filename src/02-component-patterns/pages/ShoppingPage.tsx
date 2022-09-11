@@ -19,10 +19,12 @@ export const ShoppingPage = () => {
             justifyContent:'center'
         }}>
 
-            <ProductCard product={product}>
+            <ProductCard 
+                product={product}
+            >
                 
-                <ProductCard.Image />
-                <ProductCard.Title />
+                <ProductCard.Image className="custom-image"/>
+                <ProductCard.Title className="text-bold" />
                 <ProductCard.Buttons />
                   
             </ProductCard>
