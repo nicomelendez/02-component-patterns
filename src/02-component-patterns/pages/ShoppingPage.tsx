@@ -40,6 +40,31 @@ export const ShoppingPage = () => {
                   
             </ProductCard> 
 
+            <ProductCard 
+                product={product}
+                style={{
+                    backgroundColor: '#70D1F8'
+                }}
+            >
+                
+                <ProductImage 
+                    style={{
+                        boxShadow: '10px 10px 10px rgba(0,0,0,0.4)'
+                    }}
+                />
+                <ProductTitle 
+                    style={{
+                        fontWeight:'bold'
+                    }} 
+                />
+                <ProductButtons  
+                    style={{
+                        justifyContent:'end'
+                    }}
+                />
+                  
+            </ProductCard> 
+
            
         </div>
     </div>
