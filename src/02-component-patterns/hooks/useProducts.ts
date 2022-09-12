@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product, onChangeArgs} from "../interfaces/interfaces";
 
 interface useProductsArgs{
-    product:Product,
-    onChange?: (args: onChangeArgs) => void
+    product:Product;
+    onChange?: (args: onChangeArgs) => void;
+    valueCard?:number;
 }
 
-export const useProducts = ( {onChange, product}:useProductsArgs) => {
+export const useProducts = ( {onChange, product, valueCard = 0}:useProductsArgs) => {
 
-    const [counter,setCounter] = useState(0);
+    const [counter,setCounter] = useState(valueCard);
     
     const increaseBy = (value:number) => {
         
@@ -19,6 +20,10 @@ export const useProducts = ( {onChange, product}:useProductsArgs) => {
         onChange && onChange({count: newValue, product});
     }
     
+    useEffect(()=>{
+        setCounter(valueCard)
+    },[valueCard])
+
     return{
         counter,
         increaseBy

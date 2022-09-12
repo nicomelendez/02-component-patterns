@@ -84,6 +84,7 @@ export const ShoppingPage = () => {
                         <ProductCard 
                             key={key}
                             product={porductInCart}
+                            valueCard={porductInCart.count}
                             className="bg-dark text-white" 
                             style={{
                             width:'100px'
@@ -105,11 +106,6 @@ export const ShoppingPage = () => {
                 }
             </div>
 
-            <div>
-                <code>
-                    {JSON.stringify(shoopingCart, null, 5)}
-                </code>
-            </div>
         </div>
     )
 }
