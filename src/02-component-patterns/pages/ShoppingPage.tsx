@@ -40,8 +40,6 @@ export const ShoppingPage = () => {
                 [product.id]:{...product, count}
             }
         })
-        
-        console.log(shoopingCart)
     }
 
     return (
@@ -80,44 +78,31 @@ export const ShoppingPage = () => {
 
             <div className="shooping-cart">
                 <h2>Carrito</h2>
-                <ProductCard 
-                    product={product1}
-                    className="bg-dark text-white" 
-                    style={{
-                    width:'100px'
-                    }}
-                >
-                    <ProductImage className="custom-image"/>
-                    <ProductButtons 
-                        className="custom-buttons"
-                        style={
-                            {
-                                display:'flex',
-                                justifyContent:'center'
-                            }
-                        }
-                    />
-                    
-                </ProductCard> 
-                <ProductCard 
-                    product={product2}
-                    className="bg-dark text-white" 
-                    style={{
-                    width:'100px'
-                    }}
-                >
-                    <ProductImage className="custom-image"/>
-                    <ProductButtons 
-                        className="custom-buttons"
-                        style={
-                            {
-                                display:'flex',
-                                justifyContent:'center'
-                            }
-                        }
-                    />
-                    
-                </ProductCard> 
+                
+                {
+                    Object.entries(shoopingCart).map( ([key,porductInCart]) =>(
+                        <ProductCard 
+                            key={key}
+                            product={porductInCart}
+                            className="bg-dark text-white" 
+                            style={{
+                            width:'100px'
+                            }}
+                        >
+                            <ProductImage className="custom-image"/>
+
+                            <ProductButtons 
+                                className="custom-buttons"
+                                style={
+                                    {
+                                        display:'flex',
+                                        justifyContent:'center'
+                                    }
+                                }
+                            />
+                        </ProductCard> 
+                    ))
+                }
             </div>
 
             <div>
