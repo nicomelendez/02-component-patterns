@@ -88,7 +88,15 @@ export const ShoppingPage = () => {
                     }}
                 >
                     <ProductImage className="custom-image"/>
-                    <ProductButtons className="custom-buttons"/>
+                    <ProductButtons 
+                        className="custom-buttons"
+                        style={
+                            {
+                                display:'flex',
+                                justifyContent:'center'
+                            }
+                        }
+                    />
                     
                 </ProductCard> 
                 <ProductCard 
@@ -99,7 +107,15 @@ export const ShoppingPage = () => {
                     }}
                 >
                     <ProductImage className="custom-image"/>
-                    <ProductButtons className="custom-buttons"/>
+                    <ProductButtons 
+                        className="custom-buttons"
+                        style={
+                            {
+                                display:'flex',
+                                justifyContent:'center'
+                            }
+                        }
+                    />
                     
                 </ProductCard> 
             </div>
